@@ -22,13 +22,13 @@ This project is intended to help other solo developers make their multiplayer ch
 
 # How to download on the client
 
-Before a client joins a game, it must send a HTTP request to https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/version.json to download version.json and store it locally. The file is extremely small and is located in the repository root.
+Before a client joins a game, it must send a HTTP request to https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/data/version.json to download version.json and store it locally.
 
 ```cpp
 // Pseudocode
 req = create_http_request()
 req.set_download_path("PATH/new_version.txt")
-req.request("https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/version.json")
+req.request("https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/data/version.json")
 ```
 
 # How version.json is used on the client
@@ -37,17 +37,17 @@ When version.json is already stored on the system, the old file is compared with
 
 If changes are present, or version.json was not installed prior, the client must download the new whitelist(s).
 
-- English Whitelist: https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/english/whitelist.json
+- English Whitelist: https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/data/english/whitelist.json
 
 ```cpp
 // Pseudocode
-old_version = file_to_json("PATH/version.txt")
-new_version = file_to_json("PATH/new_version.txt")
+old_json = file_to_json("PATH/version.json")
+new_json = file_to_json("PATH/new_version.json")
 
-if new_version["english-whitelist"] > old_version["english-whitelist"] {
+if new_json["english-whitelist"] > old_json["english-whitelist"] {
     req = create_http_request()
-    req.set_download_path("PATH/english-whitelist.txt")
-    req.request("https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/english/whitelist.json")
+    req.set_download_path("PATH/english-whitelist.json")
+    req.request("https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/data/english/whitelist.json")
 }
 ```
 
@@ -55,19 +55,19 @@ Afterwards, the old files must be destroyed and the new file must be renamed.
 
 ```cpp
 // Pseudocode
-old_version = file_to_json("PATH/version.txt")
-new_version = file_to_json("PATH/new_version.txt")
+old_file = file("PATH/version.json")
+new_file = file("PATH/new_version.json")
 
-delete(old_version)
-new_version.set_name("version.txt")
+delete(old_file)
+new_file.set_name("version.json")
 ```
 
 # How to download on the server
 
 The idea is the same as the client, however instead of solely downloading the whitelist, you need to download the blacklist as well.
 
-- English Whitelist: https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/english/whitelist.json
-- English Blacklist: https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/english/blacklist.json
+- English Whitelist: https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/data/english/whitelist.json
+- English Blacklist: https://raw.githubusercontent.com/caricue/word-chat/refs/heads/main/data/english/blacklist.json
 
 # How the client and server communicate
 
