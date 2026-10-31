@@ -28,6 +28,9 @@ if(NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/thirdparty/godot-cpp/src")
 endif()
 add_subdirectory(thirdparty/godot-cpp SYSTEM)
 
+# Add RapidFuzz as a subdirectory
+add_subdirectory(thirdparty/rapidfuzz-cpp)
+
 # When compiling for emscripten, this toolchainhack needs to be included.
 # set(CMAKE_PROJECT_<project-name>_INCLUDE ${godot-cpp_SOURCE_DIR}/cmake/emsdkHack.cmake)
 
@@ -71,7 +74,7 @@ if(DOC_XML)
     endif()
 endif()
 
-target_link_libraries(${LIBNAME} PRIVATE godot-cpp)
+target_link_libraries(${LIBNAME} PRIVATE godot-cpp rapidfuzz::rapidfuzz)
 
 # Require at least C++17 for this target
 set_property(TARGET ${LIBNAME} PROPERTY CXX_STANDARD 17)
