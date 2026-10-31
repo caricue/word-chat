@@ -24,4 +24,4 @@ This project is intended to help other developers make their multiplayer chats e
 
 # How to implement this into your own game
 
-- [Godot Setup](docs/installation/godot-setup.md)
+- [Godot Setup](docs/godot-setup.md)
