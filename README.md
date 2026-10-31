@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/caricue/word-chat/actions">
-    <img src="https://github.com/caricue/word-chat/workflows/godot-addon.yml/badge.svg" alt="Continuous Integration">
+    <img src="https://github.com/caricue/word-chat/workflows/Build%20Godot%20Addon/badge.svg" alt="Continuous Integration">
   </a>
   <a href="https://github.com/caricue/word-chat/blob/dev/LICENSE">
     <img src="https://img.shields.io/github/license/caricue/word-chat" alt="GitHub license">
