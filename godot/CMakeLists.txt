@@ -15,24 +15,24 @@ find_package(Python3 3.4 REQUIRED)
 find_program(GIT git REQUIRED)
 
 # Ensure godot-cpp submodule has been updated
-if(NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/godot-cpp/src")
+if(NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/thirdparty/godot-cpp/src")
     message(NOTICE "godot-cpp bindings source not found")
     message(NOTICE "initializing/updating the godot-cpp submodule...")
 
     # update the c++ bindings submodule to populate it with the necessary source for the library
     execute_process(
-        COMMAND git submodule update --init godot-cpp
+        COMMAND git submodule update --init thirdparty/godot-cpp
         WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
         COMMAND_ERROR_IS_FATAL ANY
     )
 endif()
-add_subdirectory(godot-cpp SYSTEM)
+add_subdirectory(thirdparty/godot-cpp SYSTEM)
 
 # When compiling for emscripten, this toolchainhack needs to be included.
 # set(CMAKE_PROJECT_<project-name>_INCLUDE ${godot-cpp_SOURCE_DIR}/cmake/emsdkHack.cmake)
 
 # Create the gen directory at configure time so IDEs can see generated headers immediately after generate_bindings
-file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/godot-cpp/gen/include")
+file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/thirdparty/godot-cpp/gen/include")
 
 # Add godot-cpp's module path and include the exported functions.
 # This is made available for documentation generation

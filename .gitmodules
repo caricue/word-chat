@@ -1,6 +1,6 @@
-[submodule "godot/godot-cpp"]
-	path = godot/godot-cpp
-	url = https://github.com/godotengine/godot-cpp.git
-[submodule "godot/rapidfuzz-cpp"]
-	path = godot/rapidfuzz-cpp
+[submodule "godot/thirdparty/rapidfuzz-cpp"]
+	path = godot/thirdparty/rapidfuzz-cpp
 	url = https://github.com/rapidfuzz/rapidfuzz-cpp.git
+[submodule "godot/thirdparty/godot-cpp"]
+	path = godot/thirdparty/godot-cpp
+	url = https://github.com/godotengine/godot-cpp.git
