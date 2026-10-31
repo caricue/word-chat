@@ -1,18 +1,29 @@
-# WARNING
+<h4 align="center">WORK IN PROGRESS! DO NOT USE!</h4>
 
-DO NOT USE THIS!
+<p align="center">
+  <a href="https://github.com/caricue/word-chat/actions">
+    <img src="https://github.com/caricue/word-chat/workflows/CMake/badge.svg"
+         alt="Continuous Integration">
+  </a>
+  <a href="https://github.com/caricue/word-chat/blob/dev/LICENSE">
+    <img src="https://img.shields.io/github/license/caricue/word-chat"
+         alt="GitHub license">
+  </a>
+</p>
 
-THIS IS A WORK IN PROGRESS, DO NOT USE THIS!
-
-The repo is public because it helps me figure out how this would work practically. When this is ready to use, this warning will be removed.
+<p align="center">
+  <a href="#description">Description</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#usage">Usage</a>
+</p>
 
 ---
 
-# About
+# Description
 
 This project is intended to help other developers make their multiplayer chats easier to manage. If you disagree with any changes, it is designed to make creating/using your own fork simple.
 
-# What implementation looks like
+# Demo
 
 ### Typing a message:
 
@@ -22,6 +33,6 @@ This project is intended to help other developers make their multiplayer chats e
 
 ![Example of a filtered message](https://media.tenor.com/ZuPq1jPOZdwAAAAi/placeholder-placeholder-cube.gif)
 
-# How to implement this into your own game
+# Usage
 
 - [Godot Setup](docs/godot-setup.md)
