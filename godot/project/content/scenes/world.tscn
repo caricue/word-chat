@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://6iw3ukcp0wrd"]
+
+[ext_resource type="PackedScene" uid="uid://dhnt3lpcupqgf" path="res://addons/camera_controller/camera_controller.tscn" id="1_neubr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6odns"]
+size = Vector3(19, 2, 1)
+
+[node name="World" type="Node3D" unique_id=356897475]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=176549594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_6odns")
+
+[node name="CameraController" parent="." unique_id=675032568 instance=ExtResource("1_neubr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5967436, 0, 9.112277)

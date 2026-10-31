@@ -7,7 +7,7 @@ endif()
 
 set(LIBNAME "WORD-CHAT") # "The name of the library"
 set(GODOTCPP_BUILD_PROFILE "${CMAKE_CURRENT_LIST_DIR}/build_profile.json")
-set(GODOTCPP_API_VERSION "4.8") # Error 'GODOTCPP_API_VERSION' must be provided
+set(GODOTCPP_API_VERSION "4.7") # Error 'GODOTCPP_API_VERSION' must be provided
 set(GODOT_PROJECT_DIR "project" CACHE STRING "The directory of a Godot project folder")
 
 # Make sure all the dependencies are satisfied
