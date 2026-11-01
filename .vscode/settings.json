@@ -1,6 +1,5 @@
 {
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"cmake.sourceDirectory": "${workspaceFolder}/godot",
-	"cmake.buildDirectory": "${workspaceFolder}/godot/build"
+	"C_Cpp.formatting": "clangFormat"
 }
