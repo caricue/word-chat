@@ -33,4 +33,4 @@ This project is intended to help other developers make their multiplayer chats e
 
 # Usage
 
-- [Godot Setup](docs/godot-setup.md)
+- [Godot Setup](https://github.com/caricue/word-chat/blob/main/docs/godot-setup.md)
